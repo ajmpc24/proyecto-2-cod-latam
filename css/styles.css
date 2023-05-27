@@ -1,62 +1,8 @@
-/* En este archivo escriban su CSS */
-
-/* Fonts */
-
-
-/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
-*  cuyos valores asigna por defecto el navegador.*/
-
-
-/* Reset */
-* {
-    box-sizing: border-box;
+body {
     margin: 0;
-    padding: 0;
-    /* Para que el scrolleo en la one page sea suave */
-    scroll-behavior: smooth;
+    font-family: Helvetica, sans-serif;
+    background-color: #f4f4f4;
 }
-
-/* Para quitar los puntos a los items de listas */
-ul {
-    list-style: none;
-}
-
-/* Para que los enlaces hereden el color de texto y no tengan subrayado */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
-*  el margin: auto; para tenerlo centrado fácilmente ;)
-*/
-main {
-    max-width: 1200px;
-    margin: auto;
-    font-family: 'Lato', sans-serif;
-
-}
-
-/* NO TOCAR NADA DE AQUI PARA ARRIBA */
-
-
-/* Recomendaciones! 
-*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
-*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
-*
-*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
-*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
-*
-*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
-*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
-*
-*  - Usen mucho las herramientas para desarrolladores del navegador para ir
-*    probando el CSS que escriben, resolver dudas y problemas.
-*
-*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
-*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
-*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
-*/
 
 h1 {
     font-size: 36px;
@@ -66,33 +12,23 @@ h2 {
     font-size: 28px;
 }
 
-header {
-    display: flex;
+p {
+    padding: 20px 0 20px 0;
+}
+
+a {
+    font-size: 1.5rem;
+    color: #5CC0FF;
+}
+
+/* header */
+.header {
+    background-color: #EBF7FF;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
     position: fixed;
-    justify-content: space-around;
-    box-shadow: 0 0 10px 0 #454444;
-    background-color: #f1f1f1;
-    width: 1360px;
-    height: 90px;
-    padding: 10px;
-    margin: 5px;
-    top: -5px;
-    left: -4px;
-    min-width: auto;
-}
-
-.logo {
-    float: left;
-    padding: 5px;
-    margin: 10px;
-}
-
-nav {
-    display: flex;
-    width: 1100px;
-    height: auto;
-    padding: 5px;
-    margin: 10px;
+    width: 100%;
+    z-index: 3;
+    top: -1px;
 }
 
 /* Imagen central de la web */
@@ -103,34 +39,13 @@ nav {
     border-radius: 50%;
 }
 
-ul li {
-    display: inline-block;
-    padding: 10px;
-    font-size: 20px;
-    font-family: raleway;
-}
-
-ul li:hover {
-    color: #cd79af;
-
-}
-
-main .nav-links a {
-    color: #eceff1;
-    text-decoration: none;
-}
-
-main .nav-links li a:hover {
-    color: #cd79af;
-}
-
 /* Button */
 .button {
-    border: 2px solid #f1f1f1;
+    border: 2px solid #5CC0FF;
     padding: 12px 25px;
     border-radius: 30px;
     color: #f1f1f1;
-    background: #af599e;
+    background: #5CC0FF;
     margin-left: 30px;
     margin-bottom: 15px;
     font-size: 20px;
@@ -138,9 +53,9 @@ main .nav-links li a:hover {
     cursor: pointer;
 }
 
-/* Parrafos */
-p {
-    padding: 20px 0 20px 0;
+.button:hover {
+    color: #5CC0FF;
+    background: #f1f1f1;
 }
 
 /* Centrado de todos los contenedores */
@@ -153,9 +68,9 @@ p {
     text-align: center;
 }
 
-/* Hablemos */
+/* Sobre mi / habilidades */
+.section-1,
 .section-2 {
-    background-color: rgba(175, 89, 158, 0.3);
     color: #0f0f0f;
     margin: 180px 20px 0 20px;
     padding: 40px;
@@ -163,33 +78,172 @@ p {
     min-width: auto;
 }
 
-/* Social networks */
+/* BG color Sobre mi  */
+.section-1 {
+    background-color: #C2E7FF;
+}
+
+/* NG color habilidades */
+.section-2 {
+    background-color: #99D6FF;
+}
+
+/* Social links */
 .social-networks {
     width: auto;
     display: flex;
     justify-content: space-around;
-    padding: 20px 0 90px 0;
+    padding: 120px 0 90px 0;
     margin: 10px;
 }
 
-/* Imagenes Social networks */
+/* Imagenes Social links */
 .social-networks img {
     width: 70px;
     height: 70px;
 }
 
+.social-networks img:hover {
+    background-color: #99D6FF;
+    transform: scale(1.2);
+}
+
 /* Footer */
 footer {
-    height: 90px;
+    height: 125px;
+    /* bottom: -1500px; */
     width: auto;
-    background-color: #af599e;
+    background-color: #47B6FF;
     color: #fbfbfb;
+    margin-top: auto;
 }
 
 /* Parrafo footer */
 footer .footer {
+    font-size: 2rem;
     height: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.header li a {
+    font-size: 1.3rem;
+    display: block;
+    padding: 20px 20px;
+    color: #5CC0FF;
+    text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    text-decoration: #5CC0FF underline;
+    color: #0f0f0f;
+}
+
+.header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* menu */
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: #5CC0FF;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #5CC0FF;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked~.menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+/* 48em = 768px */
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 20px 30px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
 }

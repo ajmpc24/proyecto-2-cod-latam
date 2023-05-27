@@ -13,53 +13,77 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
             rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1e78b5d788.js"
+            crossorigin="anonymous"></script>
     </head>
     <body>
-        <!-- Logo & NavBar -->
-        <header>
-            <!-- Logo Eidos -->
+        <!-- CODIGO DEL NAR RESPONSIVE  -->
+        <!-- https://codepen.io/mutedblues/pen/MmPNPG -->
+        <header class="header">
+            <a href class="logo">Alejandro Perez</a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu">
+                <li class="item"> <a href="#inicio">Inicio</a> </li>
+                <li class="item"> <a href="#sobreMi">Sobre mí</a> </li>
+                <li class="item"> <a href="#habilidades">Habilidades</a> </li>
+                <li class="item"> <a href="#contacto">Contacto</a> </li>
+            </ul>
+        </header>
+        <!-- 
+        <header class="header">
             <figure class="logo">
                 <img
                     src="https://static.wixstatic.com/media/2e1127_392b27ef188e4f25ae65c0b035f56176~mv2.png/v1/fill/w_112,h_50,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/eidoslogo.png"
-                    alt="Logo
-                    Eidos" width="130"/>
+                    alt="Logo Eidos" width="130" />
             </figure>
-            <!-- NavBar -->
-            <nav>
-                <ul class="menu">
-                    <li class="item">
-                        <a href="#inicio">Inicio</a>
-                    </li>
-                    <li class="item">
-                        <a href="#contacto">Contacto</a>
-                    </li>
-                    <li></li>
-                </ul>
-            </nav>
-        </header>
-        <hr />
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            
+            <ul class="menu">
+                <li class="item">
+                    <a href="#inicio">Inicio</a>
+                </li>
+                <li class="item">
+                    <a href="#sobreMi">Sobre mí</a>
+                </li>
+                <li class="item">
+                    <a href="#habilidades">Habilidades</a>
+                </li>
+                <li class="item">
+                    <a href="#contacto">Contacto</a>
+                </li>
+            </ul>
+        </header> -->
+
         <!-- Main -->
         <main id="inicio">
             <!-- Image page -->
             <figure class="image-web">
-                <img src="https://placekitten.com/400/400" alt="happy kitten">
+                <img src="img/aj-pic.jpg"
+                    alt="profile picture">
             </figure>
 
             <!-- Section #1 (Title & Intro) -->
-            <section class="section-1">
+            <section class="section-1" id=sobreMi>
                 <article class="article-1">
                     <!-- Title -->
                     <h1>Hola! Soy Alejandro</h1>
                     <!-- Description -->
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Et, delectus labore. Nemo accusantium ipsa nihil
-                        assumenda asperiores est aut possimus dolores tempora
-                        recusandae repudiandae dolorem perferendis animi, ut
-                        quidem. Ipsum. Lorem ipsum dolor sit, amet consectetur
-                        adipisicing elit. Obcaecati a tenetur asperiores
-                        accusantium et eum, minima beatae, magnam recusandae
-                        fugit rem accusamus. Cupiditate quos modi possimus
-                        consequuntur cum, neque quasi.</p>
+                    <p>¡Hola! Soy desarrollador y diseñador de UI/UX,
+                        disciplinado, comprometido y resiliente, actualmente
+                        estoy estudiando
+                        la carrera de programador en Teclab, y estudiando de
+                        forma autodidacta para
+                        especializarte como Desarrollador Web Full Stack y
+                        reforzar lo que
+                        aprendido.
+                        Desde que comencé mis estudios en informática, siempre
+                        ha sido un apasionado del mundo de las TI y hace tiempo
+                        que sabe que
+                        tecnología era el futuro. Y ahora que está más que
+                        confirmado, estudio
+                        y aprendo con más pasión y dedicación.</p>
                     <!-- Button -->
                     <a target="_blank"
                         href="https://drive.google.com/file/d/1eYPjKMsYN60wUDw6yKpYsOFhjmUSUxmd/view">
@@ -70,10 +94,10 @@
             </section>
 
             <!-- Section #2 hablemos (Title & Description) -->
-            <section class="section-2" id="contacto">
+            <section class="section-2" id="habilidades">
                 <article class="article-2">
                     <!-- Title -->
-                    <h2>Hablemos! </h2>
+                    <h2> Habilidades </h2>
                     <!-- Description -->
                     <p>
                         Lorem ipsum dolor sit amet. Ea veritatis reiciendis nam
@@ -87,7 +111,7 @@
                 </article>
             </section>
             <!-- Social networks -->
-            <section class="social-networks">
+            <section class="social-networks" id="contacto">
                 <!-- email -->
                 <a title="email"
                     href="https://www.google.com/intl/es-419/gmail/about/"
