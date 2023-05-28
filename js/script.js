@@ -25,3 +25,20 @@ form.addEventListener('submit', (event) => {
 	// Resetear el formulario después de enviar los datos
 	form.reset();
 });
+
+// Ocultar navBar al hacer scroll
+document.addEventListener('DOMContentLoaded', function () {
+	var prevScrollPos = window.pageYOffset;
+
+	window.addEventListener('scroll', function () {
+		var currentScrollPos = window.pageYOffset;
+
+		if (prevScrollPos > currentScrollPos) {
+			document.querySelector('.header').classList.remove('hidden');
+		} else {
+			document.querySelector('.header').classList.add('hidden');
+		}
+
+		prevScrollPos = currentScrollPos;
+	});
+});
