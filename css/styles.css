@@ -10,8 +10,6 @@ body {
 }
 
 h1 {
-    /* margin-top: 100px;
-    text-align: center; */
     font-size: 36px;
 }
 
@@ -31,6 +29,7 @@ p {
 a {
     font-size: 1.5rem;
     color: #5CC0FF;
+    margin-top: 8px;
 }
 
 /* header */
@@ -46,11 +45,10 @@ a {
 
 .header a {
     display: flex;
-    top: 700px;
+    top: 730px;
     align-items: center;
     justify-content: center;
 }
-
 
 /* Imagen central de la web */
 .image-web img {
@@ -83,7 +81,7 @@ a {
 .section-1,
 .section-2,
 .image-web,
-.social-networks-div {
+.contact-form .social-networks-div {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -98,12 +96,12 @@ a {
 /* Sobre mi / habilidades */
 .section-1,
 .section-2,
-.social-networks {
+.social-networks,
+.contact-form {
     color: #0f0f0f;
     margin: 180px 40px 0 40px;
     padding: 40px;
     min-width: auto;
-
 }
 
 /* BG color Sobre mi  */
@@ -116,13 +114,12 @@ a {
     backdrop-filter: blur(8px);
 }
 
-
 .section-2 {
     text-align: center;
 }
 
 .section-2 h2 {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .card-container {
@@ -133,10 +130,9 @@ a {
 }
 
 .card {
-    width: 280px;
-    height: 270px;
+    width: 290px;
+    height: 350px;
     padding: 25px;
-
     border: 1px solid #47B6FF;
     border-radius: 10px;
     background: rgba(245, 242, 242, 0.15);
@@ -152,9 +148,9 @@ a {
 }
 
 .card p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-align: justify;
-    line-height: 15px;
+    line-height: 22px;
 }
 
 .card i {
@@ -164,21 +160,10 @@ a {
     font-size: 3rem;
 }
 
-/* Social links */
-.social-networks-div {
-    border: 1px solid #47B6FF;
-    border-radius: 10px;
-    background: rgba(245, 242, 242, 0.15);
-    box-shadow: 0 8px 8px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(8px);
-    width: auto;
-    display: flex;
-    justify-content: space-around;
-    padding: 120px 0 90px 0;
-    margin: 40px;
-}
-
+/* Formulario */
 .contact-form {
+    width: 80%;
+    height: 80%;
     border: 1px solid #47B6FF;
     border-radius: 10px;
     background: none;
@@ -188,9 +173,10 @@ a {
 
 .contact-form h2 {
     position: relative;
-    top: -25px;
-    left: 350px;
+    top: -55px;
+    left: 245px;
     font-size: 28px;
+    padding: 15px 0;
 }
 
 .contact-form label {
@@ -202,7 +188,7 @@ a {
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     border: 1px solid #5CC0FF;
     border-radius: 4px;
@@ -218,11 +204,12 @@ a {
     flex-direction: column;
     align-items: center;
     border: none;
-    width: 250px;
+    width: 550px;
+    height: 50px;
     border-radius: 30px;
     color: #ffffff;
     background: #5CC0FF;
-    margin-left: 200px;
+    padding: 15px 0;
     font-size: 20px;
     text-align: center;
     cursor: pointer;
@@ -232,6 +219,7 @@ a {
     color: #5CC0FF;
     background: #ffffff;
     border: 1px solid #5CC0FF;
+    padding-bottom: 20px;
 }
 
 .contact-form img {
@@ -240,8 +228,22 @@ a {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     width: 500px;
     height: 290px;
-    top: 40px;
-    left: -90px;
+    top: 45px;
+    left: -130px;
+}
+
+/* Social links */
+.social-networks-div {
+    border: 1px solid #47B6FF;
+    border-radius: 10px;
+    background: rgba(245, 242, 242, 0.15);
+    box-shadow: 0 8px 8px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 120px 0 90px 0;
+    margin: 40px;
 }
 
 /* Imagenes Social links */
@@ -322,10 +324,10 @@ footer .footer {
 .header .menu-icon .navicon {
     background: #5CC0FF;
     display: block;
-    height: 2px;
+    height: 3.5px;
     position: relative;
     transition: background .2s ease-out;
-    width: 18px;
+    width: 22px;
 }
 
 .header .menu-icon .navicon:before,
@@ -373,7 +375,8 @@ footer .footer {
     top: 0;
 }
 
-@media (min-width: 930px) {
+/* Medidas responsive */
+@media (min-width: 768px) {
     .header li {
         float: left;
     }
@@ -391,22 +394,18 @@ footer .footer {
     .header .menu-icon {
         display: none;
     }
-
-
-    .contact-form {
-        margin: 20px;
-        padding: 20px;
-    }
-
-
-    .contact-form button[type="submit"] {
-        padding: 15px;
-    }
-
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
     .image-web img {
         display: none;
     }
@@ -415,22 +414,35 @@ footer .footer {
         display: none;
     }
 
-    /* Formulario */
-    .contact-form {
-        display: none;
+    .contact-form h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 245px;
+        padding: 40px 700px 0 0;
     }
 
-    /* 
+    .contact-form {
+        margin: 20px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
     .contact-form input[type="text"],
     .contact-form input[type="email"],
     .contact-form textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
+        width: 80%;
+        margin: 20px;
+        padding: 20px;
     }
 
     .contact-form button[type="submit"] {
-        width: 100%;
-        margin-left: 0;
-    } */
+        position: relative;
+        left: 30px;
+        width: 85%;
+        height: 50px;
+        padding: 15px;
+    }
 }
