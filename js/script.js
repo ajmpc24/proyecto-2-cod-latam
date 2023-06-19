@@ -42,3 +42,15 @@ document.addEventListener('DOMContentLoaded', function () {
 		prevScrollPos = currentScrollPos;
 	});
 });
+
+// Cambiar de color los item despes del click
+var links = document.querySelectorAll('.header li a');
+
+links.forEach(function (link) {
+	link.addEventListener('click', function () {
+		links.forEach(function (otherLink) {
+			otherLink.classList.remove('clicked');
+		});
+		this.classList.add('clicked');
+	});
+});
